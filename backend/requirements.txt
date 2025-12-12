@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+numpy
+pandas
+opencv-python
+deepface
+mtcnn
+tensorflow-cpu
+pydantic
+python-multipart
+matplotlib
+seaborn

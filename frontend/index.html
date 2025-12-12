@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>AI Engagement Dashboard</title>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- ChartJS + matrix plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-matrix@2.0.0/dist/chartjs-chart-matrix.min.js"></script>
+</head>
+<body>
+    <main class="main">
+        <header class="main-header">
+            <h1>Realtime Emotion &amp; Engagement Dashboard</h1>
+            <p class="subtitle">AI-based student engagement monitoring</p>
+        </header>
+
+        <!-- HÀNG TRÊN: Camera + Gauge -->
+        <section class="grid-top">
+            <!-- Camera card -->
+            <div class="card camera-card">
+                <div class="card-header">
+                    <h2>Camera Stream</h2>
+                </div>
+
+                <div class="camera-wrapper">
+                    <video id="video" autoplay muted playsinline></video>
+                    <canvas id="overlay"></canvas>
+                </div>
+
+                <div class="controls-row">
+                    <button id="startBtn" class="btn btn-primary">Start Camera</button>
+                    <button id="stopBtn" class="btn btn-danger">Stop</button>
+                </div>
+            </div>
+
+            <!-- Metrics card -->
+            <div class="card metrics-card">
+                <div class="card-header">
+                    <h2>Engagement Metrics</h2>
+                </div>
+
+                <div class="metrics-content">
+                    <canvas id="gaugeChart"></canvas>
+
+                    <div class="metric-labels">
+                        <div>
+                            <span class="metric-title">Current Engagement</span>
+                            <span id="currentEngagement" class="metric-value">0.00</span>
+                        </div>
+                        <div>
+                            <span class="metric-title">Faces in Frame</span>
+                            <span id="currentFaces" class="metric-value">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HÀNG DƯỚI: Timeline + Emotion charts -->
+        <section class="grid-bottom">
+            <!-- Timeline -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>Engagement Timeline</h2>
+                </div>
+                <canvas id="lineChart"></canvas>
+            </div>
+
+            <!-- Radar + Heatmap -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>Emotion Overview</h2>
+                </div>
+                <div class="chart-stack">
+                    <canvas id="radarChart"></canvas>
+                    <canvas id="heatmapChart"></canvas>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/camera.js"></script>
+</body>
+</html>

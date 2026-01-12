@@ -1,7 +1,7 @@
 // =====================
 //  COMMON CONSTANTS
 // =====================
-const EMOTION_LABELS = ["angry", "disgust", "fear", "happy", "sad", "surprise", "neutral"];
+const EMOTION_LABELS = ["angry", "fear", "happy", "sad", "surprise", "neutral"];
 
 
 // =====================
